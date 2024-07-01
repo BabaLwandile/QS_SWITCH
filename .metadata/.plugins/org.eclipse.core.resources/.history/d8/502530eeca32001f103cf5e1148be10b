@@ -1,0 +1,37 @@
+/*
+ * fault_handling.c
+ *
+ *  Created on: Jun 24, 2024
+ *      Author: 0163022
+ */
+
+#include "fault_handling.h"
+#include "main.h"
+
+
+#define STALL_CURRENT 3.0 // 3A
+#define TIMEOUT 5000 // 5 seconds
+#define COOLDOWN 120000 // 2 minutes in milliseconds
+
+FaultState FAULT(void)
+    {
+    ///>< Checking the feedback from the micro switches on the QS switch
+    if ((GPIO_ACFB_Pin == GPIO_PIN_RESET) && (GPIO_DCFB_Pin == GPIO_PIN_RESET))
+	{
+	return STATE_INBETWEEN;
+	}
+///>< Checking for stalling current
+    else if (adc_value >= STALL_CURRENT)
+	{
+	return STATE_STALL;
+	}
+    ///><Cheking for time out
+    else if (time > TIMEOUT)
+	{
+	return STATE_TIMEOUT;
+	}
+    else
+	{
+	return STATE_MISMATCH;
+	}
+    }

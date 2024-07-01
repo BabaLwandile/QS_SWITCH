@@ -1,0 +1,5 @@
+2024-04-08 10:17:35,857 [INFO] LogOutputStream:77 - [STDOUT_REDIRECT] 
+2024-04-08 10:17:36,634 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1502mS.
+2024-04-08 10:17:36,635 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-04-08 10:17:36,638 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-04-08 10:27:53,548 [INFO] DmaTabbedPanel:205 - Cannot restore the selected Tab for DMA

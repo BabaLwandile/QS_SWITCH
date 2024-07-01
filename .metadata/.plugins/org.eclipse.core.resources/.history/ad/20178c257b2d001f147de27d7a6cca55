@@ -1,0 +1,199 @@
+/*
+ * QS_CRRC.c
+ *
+ *  Created on: May 10, 2024
+ *      Author: Linda Ngwenya
+ */
+#include "main.h"
+#include "QS_IO.h"
+#include "QS_CRRC.h"
+#include <stdint.h>
+
+/// Variable that stores the QS state
+static QSState_t QS_Switch_State = QS_UNKNOWN;
+static Input_t Enable_Signal = GPIO_PIN_RESET;
+
+void ManualMode(void);    ///>< Function Prototype
+void Fault(FAULT);
+uint32_t getInput(const Input_t);
+void setOutput(const Output_t, const GPIO_PinState);
+
+void runQSLoop(void)
+    {
+    ManualMode(); ///><Calling the manual mode function that will detect the button Pressed
+
+    ///><reading the current state of the QS Switch
+
+    uint32_t ACState = getInput(ACFB);
+    uint32_t DCState = getInput(DCFB);
+
+    ///><Checking if the QS is on AC mode and that DC feedback is not active
+    ///><
+    if (ACState == GPIO_PIN_SET && DCState == GPIO_PIN_RESET)
+	{
+	QS_Switch_State = QS_AC_MODE;
+	}
+    ///><Checking if the QS is on DC mode and that AC feedback is not active
+    if (DCState == GPIO_PIN_SET && ACState == GPIO_PIN_RESET)
+	{
+	QS_Switch_State = QS_DC_MODE;
+	}
+    ///><If both of the two modes are not identified, the mode is unknown
+    ///><This is in between state which can be cause by some factors like power cut
+    ///><while the QS Switch was on transition mode (moving from AC To DC and vice verse
+    ///><This loop will take this the QS Switch to safe mode (default mode) which is
+    ///>< AC Mode
+    else
+	{
+	QS_Switch_State = QS_UNKNOWN; ///><The state of the QS is Unknown do some action
+	}
+
+    switch (QS_Switch_State)
+	{
+    case QS_AC_MODE:
+	setOutput(GPIO_LED_AC, GPIO_PIN_SET); ///< Indicate the AC Mode LED
+	break;
+    case QS_DC_MODE:
+	setOutput(GPIO_LED_DC, GPIO_PIN_SET); ///< Indicate the DC Mode LED
+	break;
+    case QS_UNKNOWN:
+	Fault(Inbetween_State);
+	if ( GPIO_ACFB_Pin == GPIO_PIN_SET)
+	    {
+	    setOutput(GPIO_Foward, GPIO_PIN_RESET);  ///><Turn OFF the Motor
+	    setOutput(GPIO_LED_Fault, GPIO_PIN_RESET); ///><Turn OFF the FAUlT indicator
+	    setOutput(GPIO_LED_AC, GPIO_PIN_SET);  ///><Turn ON the AC Mode LED
+	    }
+	///>< Consider Stalling current and time-out
+	///><It will check for stalling current and time out
+	/*if (adc_value>=Stalling_current || Tout>=80000)
+	 {
+	 setOutput(GPIO_LED_Fault, GPIO_PIN_RESET); ///<Turn OFF because this is another type of fault within this fault
+	 */
+	Fault(Stall_Tout);
+	break;
+    default:
+	;
+	}
+    ///><Transition();
+    }
+
+void Transition(void)
+    {
+    ///<Before we start the transition we need to check if the ES is high
+    ///<if not high the system will disallow the transition to start
+
+    if (getInput(DCS) == GPIO_PIN_SET && GPIO_Enable_Signal_Pin == GPIO_PIN_SET
+	    && getInput(ACFB) == GPIO_PIN_SET
+	    && getInput(ACS) == GPIO_PIN_RESET)
+
+    ///>< The transition is "To DC Mode" state
+    ///><The should be only one signal received at the time and ES should be Active
+    ///><This loop is checking for the DC signal from TCU
+    ///><This statement is also checking if the feedback if is on AC mode
+	{
+	setOutput(GPIO_Reverse, GPIO_PIN_SET);
+	///< The motor will start to rotate, then it will wait for DC feedback, stalling current or Timeout
+
+	if (GPIO_DCFB_Pin == GPIO_PIN_SET) ///><Received the DC feedback from QS micro-switches
+	    {
+	    QS_Switch_State = QS_DC_MODE;
+	    setOutput(GPIO_Reverse, GPIO_PIN_RESET); ///>< Stop the motor
+	    setOutput(GPIO_LED_DC, GPIO_PIN_SET); //><Indicate DC MOde activation
+	    /////////DELAY FUNCTION FOR TIME OUT////////////
+
+	    /* if (readAnalogueInput() >= MaxStallingCurrent)//< Remenber to add the time out fucntion
+	     {
+	     }///< display the Fault LED
+	     ///<This indicate that the system has fault
+	     */
+	    }
+	if (GPIO_ACFB_Pin == GPIO_PIN_SET) ///<Mismatch feedback the system will go to fault mode
+	    {
+	    QS_Switch_State = QS_FAULT;
+	    Fault(Mismatch);
+	    }
+	}
+    ///>< When a command signal is energized, without ES Active
+    if (getInput(DCS) == GPIO_PIN_SET && GPIO_Enable_Signal_Pin == GPIO_PIN_RESET
+	    && getInput(ACFB) == GPIO_PIN_SET
+	    && getInput(ACS) == GPIO_PIN_RESET)
+	{
+	Fault(ES_OFF);
+	}
+
+    if (getInput(ACS) == GPIO_PIN_SET && getInput(DCS) == GPIO_PIN_RESET) ///< The transition is "To AC Mode" state
+///<The should be only one signal received at the time
+	{          ///< this loop is checking for the AC signal from TCU
+	HAL_GPIO_WritePin(GPIOB, GPIO_Foward, GPIO_PIN_SET);
+///< The motor will start to spin/rotate, then will wait for AC feedback, stalling current or Time out
+/////////DELAY FUNCTION FOR TIME OUT////////////
+	/* if (readAnalogueInput() >= MaxStallingCurrent)//< Remenber to add the time out fucntion
+
+	 {
+	 HAL_GPIO_WritePin(GPIOB, Foward, GPIO_PIN_RESET); ///< Stop the motor
+	 HAL_GPIO_WritePin(GPIOB, LED_Fault, GPIO_PIN_SET); ///< display the Fault LED
+	 ///<This indicate that the system has fault
+	 }
+	 */
+	if (ACFB == GPIO_PIN_SET)
+	    {
+	    HAL_GPIO_WritePin(GPIOB, GPIO_Foward, GPIO_PIN_RESET); ///< Stop the motor if the feedback is received
+	    HAL_GPIO_WritePin(GPIOB, GPIO_LED_AC, GPIO_PIN_SET); ///< Indicate the AC Mode LED
+
+	    }
+	else if (DCFB == GPIO_PIN_SET) ///<Mismatch feedback the system will go to fault mode
+	    {
+	    HAL_GPIO_WritePin(GPIOB, GPIO_LED_Fault, GPIO_PIN_SET);
+	    ///< delay(2 min) cool down time
+	    }
+	}
+
+    if (ES == GPIO_PIN_RESET
+	    && (getInput(ACS) == GPIO_PIN_SET || getInput(DCS) == GPIO_PIN_SET))
+	{ ///>< If Enable Signal (ES) is low, but receive one of the signal command from the TCU
+///><therefore the system will not allow any transition
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_Fault, GPIO_PIN_SET);
+///< Try to blink the white LED
+	}
+    }
+
+void Fault(FAULT FaultType)
+    {
+    switch (FaultType)
+	{
+    ///><1st fault is stalling or time-out
+    case Stall_Tout:
+	setOutput(GPIO_Foward, GPIO_PIN_RESET);  ///><Turn OFF the Motor
+						 ///>< !!!!!!!!!!(This function should blink the RED LED)
+	setOutput(GPIO_LED_Fault, GPIO_PIN_SET); ///><Turn ON the FAUlT indicator
+	HAL_Delay(120000);      ///><Reset after a cool down period of 2 minutes
+	///>< turn OFF blinking red LED
+	break;
+    case Mismatch:
+	setOutput(GPIO_Reverse, GPIO_PIN_RESET); ///><Stop the motor, because there is fault detected
+						 ///>< For mismatch feedback all the LEDs will illuminate
+	setOutput(GPIO_LED_AC, GPIO_PIN_SET);
+	setOutput(GPIO_LED_DC, GPIO_PIN_SET);
+	setOutput(GPIO_LED_Fault, GPIO_PIN_SET); ///><Indicate FAULT Mode activation
+	HAL_Delay(120000);      ///><Reset after a cool down period of 2 minutes
+	setOutput(GPIO_LED_AC, GPIO_PIN_RESET);
+	setOutput(GPIO_LED_DC, GPIO_PIN_RESET);
+	setOutput(GPIO_LED_Fault, GPIO_PIN_RESET);
+	break;
+    case ES_OFF:
+	setOutput(GPIO_LED_Fault, GPIO_PIN_SET); //><Indicate FAULT Mode activation
+	///><Blink the White LED
+	HAL_Delay(120000);      ///><Reset after a cool down period of 2 minutes
+	setOutput(GPIO_LED_Fault, GPIO_PIN_RESET);
+	///><Turn OFF the blinking LED
+	break;
+    case Inbetween_State:
+	setOutput(GPIO_LED_Fault, GPIO_PIN_SET); ///< Indicate the Fault
+	///><The system should move to safe state, which is AC MODE
+	setOutput(GPIO_Foward, GPIO_PIN_SET); ///><Turn the motor to AC Mode direction
+	break;
+    default:
+	;
+	}
+    }

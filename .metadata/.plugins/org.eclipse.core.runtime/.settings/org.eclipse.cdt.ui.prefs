@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+formatter_profile=org.eclipse.cdt.ui.default.whitesmites_profile
+formatter_settings_version=1
+formattingConfirmScopeForEmptySelection=false
+scalability.contentAssistAutoActivation=true
+scalability.enableAll=true
+scalability.parserBasedContentAssist=true
+scalability.semanticHighlight=true
+scalability.syntaxColor=true
+sourceHoverBackgroundColor=255,255,225
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

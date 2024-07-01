@@ -1,0 +1,15 @@
+/*
+ * motor_control.c
+ *
+ *  Created on: Jun 24, 2024
+ *      Author: 0163022
+ */
+#include "motor_control.h"
+
+// Motor control directions
+#define MOTOR_ANTICLOCKWISE 0
+#define MOTOR_CLOCKWISE 1
+
+
+
+

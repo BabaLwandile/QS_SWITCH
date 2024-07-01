@@ -1,0 +1,129 @@
+/*
+ * QS_IO.c
+ *
+ *  Created on: May 10, 2024
+ *      Author: Linda Ngwenya
+ */
+
+#include "main.h"
+#include "QS_IO.h"    ///><call the Input/Output header file
+
+uint16_t getInput(const Input_t aInput)
+    {
+    uint16_t ret_val = GPIO_PIN_RESET; ///>< reset the initial value of the input
+    switch (aInput)
+	{
+    case ES:
+	ret_val = HAL_GPIO_ReadPin(GPIO_Enable_Signal_GPIO_Port,
+	GPIO_Enable_Signal_Pin);
+	break;
+    case DCS:
+	ret_val = HAL_GPIO_ReadPin(GPIO_DCS_GPIO_Port, GPIO_DCS_Pin);
+	break;
+    case ACS:
+	ret_val = HAL_GPIO_ReadPin(GPIO_ACS_GPIO_Port, GPIO_ACS_Pin);
+	break;
+    case DCFB:
+	ret_val = HAL_GPIO_ReadPin(GPIO_DCFB_GPIO_Port, GPIO_DCFB_Pin);
+	break;
+    case ACFB:
+	ret_val = HAL_GPIO_ReadPin(GPIO_ACFB_GPIO_Port, GPIO_ACFB_Pin);
+	break;
+	}
+    return (ret_val);
+    }
+
+void setOutput(const Output_t aOutput, const GPIO_PinState aState)
+    {
+    switch (aOutput)
+	{
+    case GPIO_LED_EN:
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_EN, aState);
+	break;
+    case GPIO_LED_Fault:
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_Fault, aState);
+	break;
+    case GPIO_LED_AC:
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_AC, aState);
+	break;
+    case GPIO_LED_DC:
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_DC, aState);
+	break;
+    case GPIO_Foward:
+	HAL_GPIO_WritePin(GPIOB, GPIO_Foward, aState);
+	break;
+    case GPIO_Reverse:
+	HAL_GPIO_WritePin(GPIOB, GPIO_Reverse, aState);
+	break;
+    default:
+	;
+	}
+    }
+
+///><Function definition
+void ManualMode(void)
+    {
+    if (Manual.BTN_FLAG.bit.B0)
+	{
+	if (ManualButton_Debounce()) ///><Applaying de-bounce algorithm before taking any action
+	    {
+	    Manual.BTN_FLAG.bit.B0 = RESET;       ///><Reset interrupt flag
+	    if (Manual.BTN_TIM_EN != SET) ///><Start timer when the menu button gets pressed for first time
+		{
+		Manual.BTN_TIM_EN = SET;          ///><Enable software timer
+		Manual.BTN_STATUS = BTN_PRESSED; ///><The manual button has been pressed for one time
+		setTimer(&Manual.BTN_TIM);       ///><Start software timer
+		}
+	    }
+
+	}
+    if ((checkTimer(&Manual.BTN_TIM, 5 * Manual.BTN_COUNTER))
+	    && (Manual.BTN_STATUS == BTN_PRESSED))
+	{
+	///><If the manual button has been pressed, take logic sample every 10ms from button read pin
+	if (!HAL_GPIO_ReadPin(GPIO_Manual_GPIO_Port, GPIO_Manual_Pin)) ///><To check if the button is still pressed
+	    {
+	    ++Manual.BTN_COUNTER;    ///><Increment samples number
+	    }
+	Manual.BTN_STATUS =
+		(Manual.BTN_COUNTER >= 65) ?
+			BTN_HELD_PRESSED : Manual.BTN_STATUS; ///><If the button is held pressed change button status
+	}
+    if ((checkTimer(&Manual.BTN_TIM, 350)) && Manual.BTN_TIM_EN) ///>< Take decision after 300ms whether on click or held pressed event occured
+	{
+	switch (Manual.BTN_STATUS)
+	    {
+	case BTN_HELD_PRESSED:
+	    //getting the current feedback from the QS Switch
+	    if (getInput(DCFB) == GPIO_PIN_SET)
+		{
+		//blink the DC Mode LED
+
+		}
+	    else
+		{
+		//blink the AC Mode LED
+		}
+	    while (&&Manual.BTN_STATUS == BTN_PRESSED)
+		{
+		if ()
+		    {
+
+		    }
+		}
+	    //while loop to keep the system on manual mode for 6 seconds, exit if reach 6 without action
+
+	    break;
+
+	case BTN_NOT_PRESSED:
+	    break;
+	default:
+
+	    ;
+	    }
+	Manual.BTN_TIM_EN = RESET;      ///><Disable software timer
+	Manual.BTN_COUNTER = RESET;     ///><Reset counter
+
+	//><Manual.BTN_STATUS = BTN_NOT_PRESSED; ///><Button is set to no press to avoid misbehavior of the button functionality
+	}
+    }

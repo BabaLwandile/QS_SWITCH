@@ -1,0 +1,26 @@
+19:20:13 **** Incremental Build of configuration Debug for project QS ****
+make -j20 all 
+arm-none-eabi-gcc "../Core/Src/TIM_CALLBACK.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F103x6 -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/TIM_CALLBACK.d" -MT"Core/Src/TIM_CALLBACK.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/TIM_CALLBACK.o"
+../Core/Src/TIM_CALLBACK.c: In function 'ExecuteMyCommand':
+../Core/Src/TIM_CALLBACK.c:33:26: warning: implicit declaration of function 'Fault' [-Wimplicit-function-declaration]
+   33 |     FAULT currentState = Fault(); ///><Get the current state from FAULT function
+      |                          ^~~~~
+../Core/Src/TIM_CALLBACK.c:35:5: warning: enumeration value 'ES_OFF' not handled in switch [-Wswitch]
+   35 |     switch (currentState)
+      |     ^~~~~~
+../Core/Src/TIM_CALLBACK.c:35:5: warning: enumeration value 'Inbetween_State' not handled in switch [-Wswitch]
+../Core/Src/TIM_CALLBACK.c:35:5: warning: enumeration value 'STATE_DONE' not handled in switch [-Wswitch]
+arm-none-eabi-gcc -o "QS.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="QS.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: QS.elf
+ 
+arm-none-eabi-size  QS.elf 
+arm-none-eabi-objdump -h -S QS.elf  > "QS.list"
+   text	   data	    bss	    dec	    hex	filename
+  11660	     20	   1708	  13388	   344c	QS.elf
+Finished building: default.size.stdout
+ 
+Finished building: QS.list
+ 
+
+19:20:15 Build Finished. 0 errors, 4 warnings. (took 1s.446ms)
+

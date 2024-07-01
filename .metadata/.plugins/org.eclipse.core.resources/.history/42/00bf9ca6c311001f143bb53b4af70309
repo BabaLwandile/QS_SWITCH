@@ -1,0 +1,152 @@
+/*
+ * QS_CRRC.c
+ *
+ *  Created on: May 10, 2024
+ *      Author: Linda Ngwenya
+ */
+#include "main.h"
+#include "QS_IO.h"
+#include "QS_CRRC.h"
+#include <stdint.h>
+
+/// Variable that stores the QS state
+static QSState_t QS_Switch_State = QS_UNKOWN;
+
+void ManualMode(void);    ///>< Function Prototype
+
+void runQSLoop(void)
+    {
+    ManualMode(); ///><Calling the manual mode function that will detect the button Pressed
+
+    uint16_t ACState = HAL_GPIO_ReadPin(GPIO_ACS_GPIO_Port, GPIO_ACS_Pin);
+    uint16_t DCState = HAL_GPIO_ReadPin(GPIO_DCS_GPIO_Port, GPIO_DCS_Pin);
+
+    ///><Checking if the QS is on AC mode and that DC feedback is not active
+    if (ACState == GPIO_PIN_SET && DCState == GPIO_PIN_RESET)
+	{
+	QS_Switch_State = QS_AC_MODE;
+
+	}
+    ///><Checking if the QS is on DC mode and that AC feedback is not active
+    if (DCState == GPIO_PIN_SET && ACState == GPIO_PIN_RESET)
+	{
+	QS_Switch_State = QS_DC_MODE;
+
+	}
+    ///><This is in between state which can be cause by some factors like power cut
+    ///><while the QS Switch was on transition mode (moving from AC To DC and vice verse
+    ///><This loop will take this the QS Switch to safe mode (default mode) which is
+    ///>< AC Mode
+    if (DCState == GPIO_PIN_RESET && ACState == GPIO_PIN_RESET)
+	{
+	QS_Switch_State = QS_UNKOWN;
+
+	}
+    switch (QS_Switch_State)
+	{
+    case QS_AC_MODE:
+	HAL_GPIO_WritePin(GPIOB, GPIO_Foward, GPIO_PIN_RESET); ///< Stop the motor if the feedback is received
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_AC, GPIO_PIN_SET); ///< Indicate the DC Mode LED
+
+	break;
+    case QS_DC_MODE:
+	HAL_GPIO_WritePin(GPIOB, GPIO_Reverse, GPIO_PIN_RESET); ///< Stop the motor if the feedback is received
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_DC, GPIO_PIN_SET); ///< Indicate the DC Mode LED
+	break;
+    case QS_UNKOWN:
+	HAL_GPIO_WritePin(GPIOB, GPIO_Foward, GPIO_PIN_SET); ///><Take the switch to AC MODE
+	/*while (GPIO_ACFB != GPIO_PIN_SET && (readAnalogueInput() <= MaxStallingCurrent)) ///<while the AC feedback is not received stay on the loop
+	 ///<also if time out and stalling current is not reached, it will stay on this loop
+	 {
+
+	 }
+
+	 */
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_AC, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_Foward, GPIO_PIN_RESET);
+
+	break;
+    case QS_FAULT:
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_Fault, GPIO_PIN_SET);
+	HAL_Delay(120000);    ///><Delay for 2 min
+	break;
+    case QS_MANUAL_MODE:
+
+	break;
+    default:
+	;
+	///><Transition();
+	}
+    }
+void Transition(void)
+    {
+///<Before we start the transition we need to check if the ES is high
+///<if not high the system will disallow the transition to start
+    if (ES == GPIO_PIN_SET)
+	{
+
+	if (getInput(DCS) == GPIO_PIN_SET && getInput(ACS) == GPIO_PIN_RESET) ///>< The transition is "To DC Mode" state
+	///><The should be only one signal received at the time. This loop is checking for the DC signal from TCU
+	    {
+
+	    HAL_GPIO_WritePin(GPIOB, GPIO_Reverse, GPIO_PIN_SET);
+	    ///< The motor will start to spin/rotate, then will wait for DC feedback, stalling current or Time out
+	    /////////DELAY FUNCTION FOR TIME OUT////////////
+
+	    /* if (readAnalogueInput() >= MaxStallingCurrent)//< Remenber to add the time out fucntion
+
+	     {
+	     HAL_GPIO_WritePin(GPIOB, Reverse, GPIO_PIN_RESET); ///< Stop the motor
+	     HAL_GPIO_WritePin(GPIOB, LED_Fault, GPIO_PIN_SET);
+	     }///< display the Fault LED
+	     ///<This indicate that the system has fault
+	     */
+	    if (DCFB == GPIO_PIN_SET) ///><Received the DC feedback from QS micro-switches
+		{
+		QS_Switch_State = QS_DC_MODE;
+
+		}
+	    else if (ACFB == GPIO_PIN_SET) ///<Mismatch feedback the system will go to fault mode
+		{
+		QS_Switch_State = QS_FAULT;
+
+		}
+	    }
+
+	if (getInput(ACS) == GPIO_PIN_SET && getInput(DCS) == GPIO_PIN_RESET) ///< The transition is "To AC Mode" state
+	///<The should be only one signal received at the time
+	    {          ///< this loop is checking for the AC signal from TCU
+	    HAL_GPIO_WritePin(GPIOB, GPIO_Foward, GPIO_PIN_SET);
+	    ///< The motor will start to spin/rotate, then will wait for AC feedback, stalling current or Time out
+	    /////////DELAY FUNCTION FOR TIME OUT////////////
+	    /* if (readAnalogueInput() >= MaxStallingCurrent)//< Remenber to add the time out fucntion
+
+	     {
+	     HAL_GPIO_WritePin(GPIOB, Foward, GPIO_PIN_RESET); ///< Stop the motor
+	     HAL_GPIO_WritePin(GPIOB, LED_Fault, GPIO_PIN_SET); ///< display the Fault LED
+	     ///<This indicate that the system has fault
+	     }
+	     */
+	    if (ACFB == GPIO_PIN_SET)
+		{
+		HAL_GPIO_WritePin(GPIOB, GPIO_Foward, GPIO_PIN_RESET); ///< Stop the motor if the feedback is received
+		HAL_GPIO_WritePin(GPIOB, GPIO_LED_AC, GPIO_PIN_SET); ///< Indicate the DC Mode LED
+
+		}
+	    else if (DCFB == GPIO_PIN_SET) ///<Mismatch feedback the system will go to fault mode
+		{
+		HAL_GPIO_WritePin(GPIOB, GPIO_LED_Fault, GPIO_PIN_SET);
+		///< delay(2 min) cool down time
+		}
+	    }
+	}
+    if (ES == GPIO_PIN_RESET
+	    && (getInput(ACS) == GPIO_PIN_SET || getInput(DCS) == GPIO_PIN_SET))
+	{ ///>< If Enable Signal (ES) is low, but receive one of the signal command from the TCU
+	  ///><therefore the system will not allow any transition
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_Fault, GPIO_PIN_SET);
+	///< Try to blink the white LED
+	}
+
+    }
+

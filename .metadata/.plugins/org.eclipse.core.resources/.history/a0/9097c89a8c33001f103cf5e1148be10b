@@ -1,0 +1,38 @@
+/*
+ * motor_control.c
+ *
+ *  Created on: Jun 24, 2024
+ *      Author: 0163022
+ */
+#include "motor_control.h"
+#include "main.h"
+
+void ControlMotor(int direction)
+    {
+
+    if (direction == 1)
+	{
+	//clockwise
+	HAL_GPIO_WritePin(GPIOB, GPIO_Forward_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_Reverse_Pin, GPIO_PIN_RESET);
+	}
+    else
+	{
+	// Anti-clockwise
+	HAL_GPIO_WritePin(GPIOB, GPIO_Forward_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_Reverse_Pin, GPIO_PIN_SET);
+	}
+
+    // Monitor the motor running time for timeout, stalling current and the feedbacks
+    while ((FAULT() != STATE_TIMEOUT) || (FAULT() != STATE_STALL)
+	    || (GPIO_DCFB_Pin == SET) || (GPIO_DCFB_Pin == SET))
+	{
+
+	HAL_Delay(10);
+	}
+
+    // Stop the motor after timeout
+    HAL_GPIO_WritePin(GPIOB, GPIO_Forward_Pin | GPIO_Reverse_Pin,
+	    GPIO_PIN_RESET);
+    }
+

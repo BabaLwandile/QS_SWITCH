@@ -1,0 +1,20 @@
+/*
+ * QS_Switch.h
+ *
+ *  Created on: Jun 25, 2024
+ *      Author: 0163022
+ */
+
+#ifndef INC_QS_SWITCH_H_
+#define INC_QS_SWITCH_H_
+
+// State definitions
+typedef enum
+    {
+    STATE_SAFE_MODE,
+    STATE_DC_MODE,
+    STATE_AC_MODE,
+    STATE_MANUAL_MODE
+    } SystemState;
+
+#endif /* INC_QS_SWITCH_H_ */

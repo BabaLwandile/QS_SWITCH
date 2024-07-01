@@ -1,0 +1,49 @@
+/*
+ * Manual.c
+ *
+ *  Created on: Jul 1, 2024
+ *      Author: 0163022
+ */
+
+#include "main.h"
+
+#define MANUAL_MODE_DELAY 3000 // 3 seconds to activate manual mode
+#define INACTIVE_TIME_MS  8000 // 8 seconds to exit manual mode
+
+uint8_t manualMode = 0;
+uint8_t manualModeActive = 0;
+uint32_t manualStartTime = 0;
+
+void Enter_Manual_Mode(void)
+    {
+    uint32_t manualStartTime = HAL_GetTick();
+    uint8_t manualMode = 1;
+
+    while (manualMode)
+	{
+	if ((HAL_GetTick() - manualStartTime) > INACTIVE_TIME_MS) //><EXIT manual mode if more that 8 seconds without any action
+	    {
+	    manualMode = 0;
+	    manualModeActive = 0;
+	    }
+    if (HAL_GPIO_ReadPin(GPIOB, GPIO_Manual_Pin) == GPIO_PIN_SET)
+	{
+	HAL_Delay(300); // Debounce delay
+	if (HAL_GPIO_ReadPin(GPIOB, BUTTON_PIN) == GPIO_PIN_SET)
+	    {
+	    manualStartTime = HAL_GetTick();
+	    if (currentState == 1)
+		{
+		Motor_Run_Clockwise();
+		while (HAL_GPIO_ReadPin(GPIOB, ACFB_PIN) != GPIO_PIN_SET)
+		    {
+		    Check_Current();
+		    Check_Timeout();
+		    }
+		HAL_GPIO_WritePin(GPIOB, LED_GREEN_AC_PIN, GPIO_PIN_SET);
+		HAL_GPIO_WritePin(GPIOB, LED_GREEN_DC_PIN, GPIO_PIN_RESET);
+		currentState = 2; // AC Mode
+		}
+
+	    }
+}}}

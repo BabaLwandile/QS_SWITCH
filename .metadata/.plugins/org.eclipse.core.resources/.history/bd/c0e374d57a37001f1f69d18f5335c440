@@ -1,0 +1,41 @@
+/*
+ * QS_Switch.c
+ *
+ *  Created on: Jun 25, 2024
+ *      Author: 0163022
+ */
+#include "fault_handling.h"
+#include "main.h"
+#include "QS_Switch.h"
+
+extern ADC_HandleTypeDef hadc1;
+
+SystemState currentState = STATE_SAFE_MODE;
+uint8_t manualMode = 0;
+
+uint32_t read_current(void)
+    {
+    HAL_ADC_Start(&hadc1);
+    if (HAL_ADC_PollForConversion(&hadc1, 10) == HAL_OK)
+	{
+	return HAL_ADC_GetValue(&hadc1);
+	}
+    return 0;
+    }
+
+void RunQSLoop(void)
+    {
+    HandleFault(); //><This will handle the fault if the QS Switch didn't receive either DC of AC Feedback
+
+    if(GPIO_DCFB_Pin==SET && GPIO_ACFB_Pin==RESET){
+	currentState=STATE_DC_MODE;
+    }
+    else if(GPIO_ACFB_Pin==SET && GPIO_DCFB_Pin==RESET){
+	currentState=STATE_AC_MODE;
+    }
+
+
+
+
+
+    }

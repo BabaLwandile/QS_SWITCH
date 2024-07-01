@@ -1,0 +1,33 @@
+2024-04-08 10:17:26,956 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 432794992 Bytes (591396864)
+2024-04-08 10:17:30,287 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 220981768 Bytes (591396864)
+2024-04-08 10:17:32,255 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 205153736 Bytes (591396864)
+2024-04-08 10:17:32,793 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-04-08 10:17:32,793 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-08 10:17:32,793 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-08 10:17:32,794 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-08 10:17:32,794 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-08 10:17:32,795 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-04-08 10:17:32,950 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\license.tmp_save
+2024-04-08 10:17:33,253 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\license.tmp
+2024-04-08 10:17:33,429 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\gpio.tmp_save
+2024-04-08 10:17:33,558 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\gpio.tmp
+2024-04-08 10:17:33,726 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_it.c_save
+2024-04-08 10:17:33,828 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_it.c
+2024-04-08 10:17:33,834 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_it.h_save
+2024-04-08 10:17:33,893 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_it.h
+2024-04-08 10:17:33,909 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_hal_msp.c_save
+2024-04-08 10:17:34,000 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_hal_msp.c
+2024-04-08 10:17:34,005 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\system.tmp_save
+2024-04-08 10:17:34,058 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\system.tmp
+2024-04-08 10:17:34,072 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_hal_conf.h_save
+2024-04-08 10:17:34,142 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_hal_conf.h
+2024-04-08 10:17:34,278 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\main.h_save
+2024-04-08 10:17:34,349 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\main.h
+2024-04-08 10:17:34,358 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\main.c_save
+2024-04-08 10:17:34,454 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\main.c
+2024-04-08 10:17:35,122 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 429mS.
+2024-04-08 10:17:35,130 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-04-08 10:17:35,318 [INFO] ConfigFileManager:1495 - The Die is : DIE440
+2024-04-08 10:17:35,332 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-04-08 10:17:35,342 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-04-08 10:17:35,355 [INFO] ApiDbMcu:508 - Load IP Config File for TOUCHSENSING

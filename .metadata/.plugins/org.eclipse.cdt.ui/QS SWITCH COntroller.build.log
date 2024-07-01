@@ -1,0 +1,10 @@
+19:20:15 **** Incremental Build of configuration Debug for project QS SWITCH COntroller ****
+make -j20 all 
+arm-none-eabi-size  QS\ SWITCH\ COntroller.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7912	     20	   1644	   9576	   2568	QS SWITCH COntroller.elf
+Finished building: default.size.stdout
+ 
+
+19:20:15 Build Finished. 0 errors, 0 warnings. (took 495ms)
+

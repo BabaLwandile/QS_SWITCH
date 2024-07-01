@@ -1,0 +1,199 @@
+2024-05-08 15:09:40,786 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 585563752 Bytes (807403520)
+2024-05-08 15:10:22,864 [INFO] MainUpdater:2873 - connection check result : 10
+2024-05-08 15:10:24,803 [INFO] ServerAccessManage:473 - Download File stm32cube_fw_f1_v180.zip
+2024-05-08 15:12:19,088 [ERROR] FileExtend:455 - File entry not found
+2024-05-08 15:12:19,089 [INFO] FileExtend:240 - Unzip File : stm32cube_fw_f1_v180.zip
+2024-05-08 15:12:19,089 [INFO] FileExtend:255 - Standard Zip Deflate
+2024-05-08 15:12:51,774 [INFO] ServerAccessManage:473 - Download File stm32cube_fw_f1_v185.zip
+2024-05-08 15:12:57,701 [INFO] FileExtend:240 - Unzip File : stm32cube_fw_f1_v185.zip
+2024-05-08 15:12:57,701 [INFO] FileExtend:255 - Standard Zip Deflate
+2024-05-08 15:13:13,438 [INFO] MainUpdater:3567 - Updater definition file requires update
+2024-05-08 15:13:13,438 [INFO] LoadServerPackagesThread:196 - End of LoadServerPackages Thread
+2024-05-08 15:13:13,491 [INFO] ServerAccessManage:473 - Download File updaters.zip
+2024-05-08 15:13:13,545 [INFO] FileExtend:240 - Unzip File : updaters.zip
+2024-05-08 15:13:13,545 [INFO] FileExtend:255 - Standard Zip Deflate
+2024-05-08 15:13:14,966 [INFO] ServerAccessManage:473 - Download File PacksControlFlags.xml
+2024-05-08 15:13:15,023 [INFO] ServerAccessManage:473 - Download File cubemx.pidx
+2024-05-08 15:13:15,570 [INFO] ServerAccessManage:473 - Download File STMicroelectronics.X-CUBE-ALGOBUILD.pdsc
+2024-05-08 15:13:16,894 [INFO] ServerAccessManage:473 - Download File Cesanta.I-CUBE-Mongoose.pdsc
+2024-05-08 15:13:18,757 [ERROR] ServerAccessManage:1089 - Problem, file not found on Server
+2024-05-08 15:13:18,803 [WARN] PackLoader:240 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.4.0
+2024-05-08 15:13:18,808 [WARN] PackLoader:240 - Cannot read IP mode file for Cesanta.I-CUBE-Mongoose.7.13.0
+2024-05-08 15:13:18,809 [INFO] PopulateThirdPartyThread:66 - Ending populate Thread
+2024-05-08 15:13:18,811 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-05-08 15:13:18,921 [INFO] CheckServerUpdateThread:120 - End of CheckServer Thread
+2024-05-08 15:13:18,926 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 415602584 Bytes (913309696)
+2024-05-08 15:13:18,937 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USBPD 4.1
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 6.0.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.4.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F4 1.1.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics LIBJPEG 8.0.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SMBUS 2.1.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TCPP 4.1.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.2.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WB 2.0.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.23.2
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-F7 1.1.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L5 2.0.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC6 3.1.0
+2024-05-08 15:13:18,940 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.3.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G0 1.1.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SAFEA1 1.2.2
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 3.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 5.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics STM32_WPAN 1.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-FLIGHT1 5.0.2
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Cesanta I-CUBE-Mongoose 7.13.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 9.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-G4 2.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 3.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 5.7.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENVWB1 1.3.1
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 7.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-SIGFOX1 3.2.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ISPU 2.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 5.1.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :emotas I-CUBE-CANOPEN 1.3.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 10.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-FREERTOS 1.1.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC7 1.0.1
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :ITTIA_DB I-CUBE-ITTIADB 8.9.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :portGmbH I-Cube-SoM-uGOAL 1.1.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALS 1.0.1
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLEMGR 3.1.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 1.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-SMARTAG2 1.2.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-WL 2.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :SEGGER I-CUBE-embOS 1.3.1
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.4.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-SNS-MOTENV1 5.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 8.1.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7RS 1.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-L4 2.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics ThreadX 0.0.2
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :WES I-CUBE-Cesium 1.3.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics FP-ATR-ASTRA1 2.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 4.0.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.3.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 3.4.1
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 3.2.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :Infineon AIROC-Wi-Fi-Bluetooth-STM32 1.6.0
+2024-05-08 15:13:18,941 [INFO] ThirdParty:1030 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2024-05-08 15:13:18,942 [INFO] ThirdPartyModel:298 - Start build external matchings
+2024-05-08 15:13:19,077 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-08 15:13:19,077 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-08 15:13:19,077 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-08 15:13:19,077 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-08 15:13:19,077 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-08 15:13:19,079 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-05-08 15:13:19,080 [INFO] ThirdPartyModel:316 - End build external matchings
+2024-05-08 15:13:19,090 [INFO] LoadServerUpdatesThread:375 - End of LoadServerUpdate Thread
+2024-05-08 15:13:19,166 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp_save
+2024-05-08 15:13:19,232 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp
+2024-05-08 15:13:19,266 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp_save
+2024-05-08 15:13:19,315 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp
+2024-05-08 15:13:19,376 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c_save
+2024-05-08 15:13:19,505 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c
+2024-05-08 15:13:19,510 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h_save
+2024-05-08 15:13:19,560 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h
+2024-05-08 15:13:19,573 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c_save
+2024-05-08 15:13:19,631 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c
+2024-05-08 15:13:19,635 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp_save
+2024-05-08 15:13:19,665 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp
+2024-05-08 15:13:19,673 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h_save
+2024-05-08 15:13:19,706 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h
+2024-05-08 15:13:19,725 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h_save
+2024-05-08 15:13:19,827 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h
+2024-05-08 15:13:19,833 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c_save
+2024-05-08 15:13:19,888 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c
+2024-05-08 15:13:20,235 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 117mS.
+2024-05-08 15:13:20,241 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-05-08 15:13:20,355 [INFO] ConfigFileManager:1495 - The Die is : DIE412
+2024-05-08 15:13:20,366 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-05-08 15:13:20,381 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-05-08 15:13:20,394 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE
+2024-05-08 15:13:22,804 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 2563mS.
+2024-05-08 15:13:22,805 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-05-08 15:13:22,806 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-05-08 15:18:25,056 [INFO] Gpio:277 - dependency for GPIO [ADC1]
+2024-05-08 15:18:43,404 [INFO] Gpio:277 - dependency for GPIO [ADC1]
+2024-05-08 15:19:43,918 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 428326656 Bytes (954204160)
+2024-05-08 15:19:46,317 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 483800592 Bytes (954204160)
+2024-05-08 15:19:46,425 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-08 15:19:46,425 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-08 15:19:46,425 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-08 15:19:46,425 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-08 15:19:46,425 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-08 15:19:46,427 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-05-08 15:19:46,506 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp_save
+2024-05-08 15:19:46,544 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp
+2024-05-08 15:19:46,567 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp_save
+2024-05-08 15:19:46,610 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp
+2024-05-08 15:19:46,644 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c_save
+2024-05-08 15:19:46,695 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c
+2024-05-08 15:19:46,701 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h_save
+2024-05-08 15:19:46,738 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h
+2024-05-08 15:19:46,748 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c_save
+2024-05-08 15:19:46,798 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c
+2024-05-08 15:19:46,801 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp_save
+2024-05-08 15:19:46,832 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp
+2024-05-08 15:19:46,840 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h_save
+2024-05-08 15:19:46,888 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h
+2024-05-08 15:19:46,907 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h_save
+2024-05-08 15:19:46,946 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h
+2024-05-08 15:19:46,952 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c_save
+2024-05-08 15:19:47,019 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c
+2024-05-08 15:19:47,409 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 135mS.
+2024-05-08 15:19:47,412 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-05-08 15:19:47,500 [INFO] ConfigFileManager:1495 - The Die is : DIE412
+2024-05-08 15:19:48,194 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 782mS.
+2024-05-08 15:19:48,195 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-05-08 15:19:48,199 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-05-08 15:22:58,821 [INFO] Gpio:277 - dependency for GPIO [ADC1]
+2024-05-08 15:23:04,507 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 781390824 Bytes (954204160)
+2024-05-08 15:23:07,267 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 286358424 Bytes (947912704)
+2024-05-08 15:23:10,801 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 385839200 Bytes (947912704)
+2024-05-08 15:23:10,900 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-05-08 15:23:10,900 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-05-08 15:23:10,900 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-05-08 15:23:10,900 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-05-08 15:23:10,900 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-05-08 15:23:10,902 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-05-08 15:23:10,979 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp_save
+2024-05-08 15:23:11,022 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp
+2024-05-08 15:23:11,046 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp_save
+2024-05-08 15:23:11,089 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp
+2024-05-08 15:23:11,127 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c_save
+2024-05-08 15:23:11,174 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c
+2024-05-08 15:23:11,182 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h_save
+2024-05-08 15:23:11,217 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h
+2024-05-08 15:23:11,227 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c_save
+2024-05-08 15:23:11,276 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c
+2024-05-08 15:23:11,279 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp_save
+2024-05-08 15:23:11,309 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp
+2024-05-08 15:23:11,318 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h_save
+2024-05-08 15:23:11,370 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h
+2024-05-08 15:23:11,389 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h_save
+2024-05-08 15:23:11,426 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h
+2024-05-08 15:23:11,432 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c_save
+2024-05-08 15:23:11,500 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c
+2024-05-08 15:23:11,754 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 109mS.
+2024-05-08 15:23:11,756 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-05-08 15:23:12,033 [INFO] ConfigFileManager:1495 - The Die is : DIE412
+2024-05-08 15:23:12,657 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 901mS.
+2024-05-08 15:23:12,659 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-05-08 15:23:12,660 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.

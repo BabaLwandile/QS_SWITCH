@@ -1,0 +1,26 @@
+/*
+ * motor_control.c
+ *
+ *  Created on: Jun 24, 2024
+ *      Author: 0163022
+ */
+#include "motor_control.h"
+#include "main.h"
+
+// Motor control directions
+#define MOTOR_ANTICLOCKWISE 0
+#define MOTOR_CLOCKWISE 1
+
+void ControlMotor(int direction)
+    {
+    uint32_t startTime = HAL_GetTick();
+
+    if (direction == 1)
+	{
+	//clockwise
+	HAL_GPIO_WritePin(GPIOB, GPIO_Forward_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_Reverse_Pin, GPIO_PIN_RESET);
+	}
+
+    }
+

@@ -1,0 +1,20 @@
+/*
+ * QS_Switch.c
+ *
+ *  Created on: Jun 25, 2024
+ *      Author: 0163022
+ */
+
+#include "main.h"
+#include "QS_Switch.h"
+
+#define COOLDOWN 120000 // 2 minutes in milliseconds
+
+SystemState currentState = STATE_SAFE_MODE;
+uint8_t manualMode = 0;
+
+// Check ES signal
+        if (HAL_GPIO_ReadPin(GPIOx, ES_Pin) == GPIO_PIN_RESET) {
+            handleFault(FAULT_ES_NOT_ACTIVE);
+            continue;
+        }

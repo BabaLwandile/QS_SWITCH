@@ -1,0 +1,37 @@
+2024-06-12 15:55:57,914 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,450x204,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-12 15:56:05,226 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-12 15:56:53,014 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-12 15:56:58,259 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-12 15:57:34,988 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 839897008 Bytes (1073741824)
+2024-06-12 15:57:37,110 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 865589168 Bytes (1073741824)
+2024-06-12 15:57:43,075 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 996661168 Bytes (1073741824)
+2024-06-12 15:57:43,704 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-06-12 15:57:43,705 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-06-12 15:57:43,705 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-06-12 15:57:43,706 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-06-12 15:57:43,706 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-06-12 15:57:43,709 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-06-12 15:57:43,973 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp_save
+2024-06-12 15:57:44,429 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\license.tmp
+2024-06-12 15:57:44,611 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp_save
+2024-06-12 15:57:44,767 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\gpio.tmp
+2024-06-12 15:57:44,985 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c_save
+2024-06-12 15:57:45,248 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_it.c
+2024-06-12 15:57:45,261 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h_save
+2024-06-12 15:57:45,400 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_it.h
+2024-06-12 15:57:45,423 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c_save
+2024-06-12 15:57:45,646 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\stm32f1xx_hal_msp.c
+2024-06-12 15:57:45,655 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp_save
+2024-06-12 15:57:45,723 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\MXTmpFiles\system.tmp
+2024-06-12 15:57:45,740 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h_save
+2024-06-12 15:57:45,846 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\stm32f1xx_hal_conf.h
+2024-06-12 15:57:45,906 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h_save
+2024-06-12 15:57:46,030 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Inc\main.h
+2024-06-12 15:57:46,039 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c_save
+2024-06-12 15:57:46,215 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS\Core\Src\main.c
+2024-06-12 15:57:47,189 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 509mS.
+2024-06-12 15:57:47,200 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-06-12 15:57:47,478 [INFO] ConfigFileManager:1495 - The Die is : DIE412
+2024-06-12 15:57:47,498 [INFO] ApiDbMcu:508 - Load IP Config File for FATFS
+2024-06-12 15:57:47,505 [INFO] ApiDbMcu:508 - Load IP Config File for FREERTOS
+2024-06-12 15:57:47,515 [INFO] ApiDbMcu:508 - Load IP Config File for USB_DEVICE

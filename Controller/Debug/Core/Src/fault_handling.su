@@ -1,0 +1,2 @@
+../Core/Src/fault_handling.c:20:12:FAULT	16	static
+../Core/Src/fault_handling.c:59:6:HandleFault	16	static

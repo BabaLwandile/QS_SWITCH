@@ -1,0 +1,78 @@
+2024-06-24 08:58:53,401 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,458x420,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-24 08:58:57,162 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-24 09:01:59,310 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 695591544 Bytes (1073741824)
+2024-06-24 09:02:01,679 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 733340280 Bytes (1073741824)
+2024-06-24 09:02:01,790 [INFO] ProjectBuilder:2359 - IP not ready for code generation: ADC1
+2024-06-24 09:02:07,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-06-24 09:02:07,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-06-24 09:02:07,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-06-24 09:02:07,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-06-24 09:02:07,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: IWDG
+2024-06-24 09:02:07,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-06-24 09:02:07,976 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F1
+2024-06-24 09:02:07,978 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-06-24 09:02:08,052 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\license.tmp_save
+2024-06-24 09:02:08,110 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\license.tmp
+2024-06-24 09:02:08,153 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\gpio.tmp_save
+2024-06-24 09:02:08,283 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\gpio.tmp
+2024-06-24 09:02:08,396 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_it.c_save
+2024-06-24 09:02:08,552 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_it.c
+2024-06-24 09:02:08,564 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_it.h_save
+2024-06-24 09:02:08,634 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_it.h
+2024-06-24 09:02:08,654 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_hal_msp.c_save
+2024-06-24 09:02:08,777 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_hal_msp.c
+2024-06-24 09:02:08,788 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\system.tmp_save
+2024-06-24 09:02:08,836 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\system.tmp
+2024-06-24 09:02:08,850 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_hal_conf.h_save
+2024-06-24 09:02:08,909 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_hal_conf.h
+2024-06-24 09:02:08,921 [WARN] IPConfigManager:3440 - IP not found : TIM
+2024-06-24 09:02:08,922 [WARN] CodeGenerator:3939 - IP not found : null
+2024-06-24 09:02:08,929 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\main.h_save
+2024-06-24 09:02:08,982 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\main.h
+2024-06-24 09:02:08,988 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\main.c_save
+2024-06-24 09:02:09,089 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\main.c
+2024-06-24 09:02:09,666 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 353mS.
+2024-06-24 09:02:09,671 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-06-24 09:02:09,830 [INFO] ConfigFileManager:1495 - The Die is : DIE412
+2024-06-24 09:02:10,738 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1067mS.
+2024-06-24 09:02:10,740 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-06-24 09:02:10,743 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-06-24 09:16:41,428 [INFO] ParamManager:896 - [Generic UI] PropertyChangeEvent: TAB_STATUS_CHANGED , "dont care", "never mind"
+2024-06-24 09:16:41,445 [INFO] NvicIntPanel:101 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2024-06-24 09:17:11,568 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 793695112 Bytes (1073741824)
+2024-06-24 09:17:13,739 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 650789264 Bytes (1073741824)
+2024-06-24 09:17:18,273 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 708120208 Bytes (1073741824)
+2024-06-24 09:17:18,568 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-06-24 09:17:18,568 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-06-24 09:17:18,569 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-06-24 09:17:18,569 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-06-24 09:17:18,569 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: IWDG
+2024-06-24 09:17:18,569 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-06-24 09:17:18,569 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: TIM1_8F1
+2024-06-24 09:17:18,570 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-06-24 09:17:18,630 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\license.tmp_save
+2024-06-24 09:17:18,670 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\license.tmp
+2024-06-24 09:17:18,683 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\gpio.tmp_save
+2024-06-24 09:17:18,718 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\gpio.tmp
+2024-06-24 09:17:18,792 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_it.c_save
+2024-06-24 09:17:18,901 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_it.c
+2024-06-24 09:17:18,907 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_it.h_save
+2024-06-24 09:17:18,942 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_it.h
+2024-06-24 09:17:18,952 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_hal_msp.c_save
+2024-06-24 09:17:19,028 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\stm32f1xx_hal_msp.c
+2024-06-24 09:17:19,032 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\system.tmp_save
+2024-06-24 09:17:19,061 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\MXTmpFiles\system.tmp
+2024-06-24 09:17:19,068 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_hal_conf.h_save
+2024-06-24 09:17:19,121 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\stm32f1xx_hal_conf.h
+2024-06-24 09:17:19,132 [WARN] IPConfigManager:3440 - IP not found : TIM
+2024-06-24 09:17:19,132 [WARN] CodeGenerator:3939 - IP not found : null
+2024-06-24 09:17:19,137 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\main.h_save
+2024-06-24 09:17:19,199 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Inc\main.h
+2024-06-24 09:17:19,205 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\main.c_save
+2024-06-24 09:17:19,327 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\Controller\Core\Src\main.c
+2024-06-24 09:17:19,756 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 246mS.
+2024-06-24 09:17:19,759 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-06-24 09:17:19,908 [INFO] ConfigFileManager:1495 - The Die is : DIE412
+2024-06-24 09:17:20,739 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 980mS.
+2024-06-24 09:17:20,742 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 2mS.
+2024-06-24 09:17:20,746 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.

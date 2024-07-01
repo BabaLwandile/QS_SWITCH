@@ -1,0 +1,76 @@
+2024-04-09 13:38:52,980 [INFO] Gpio:277 - dependency for GPIO [ADC, RCC, SYS]
+2024-04-09 14:36:24,850 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 470718496 Bytes (754974720)
+2024-04-09 14:36:26,976 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 230152320 Bytes (754974720)
+2024-04-09 14:36:30,668 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 336728472 Bytes (754974720)
+2024-04-09 14:36:31,027 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-04-09 14:36:31,027 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-09 14:36:31,027 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-09 14:36:31,027 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-09 14:36:31,027 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-09 14:36:31,029 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-04-09 14:36:31,121 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\license.tmp_save
+2024-04-09 14:36:31,193 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\license.tmp
+2024-04-09 14:36:31,247 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\gpio.tmp_save
+2024-04-09 14:36:31,295 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\gpio.tmp
+2024-04-09 14:36:31,368 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_it.c_save
+2024-04-09 14:36:31,582 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_it.c
+2024-04-09 14:36:31,594 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_it.h_save
+2024-04-09 14:36:31,650 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_it.h
+2024-04-09 14:36:31,667 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_hal_msp.c_save
+2024-04-09 14:36:31,745 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_hal_msp.c
+2024-04-09 14:36:31,752 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\system.tmp_save
+2024-04-09 14:36:31,792 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\system.tmp
+2024-04-09 14:36:31,803 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_hal_conf.h_save
+2024-04-09 14:36:31,864 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_hal_conf.h
+2024-04-09 14:36:31,885 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\main.h_save
+2024-04-09 14:36:31,959 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\main.h
+2024-04-09 14:36:31,972 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\main.c_save
+2024-04-09 14:36:32,110 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\main.c
+2024-04-09 14:36:33,099 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 761mS.
+2024-04-09 14:36:33,103 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-04-09 14:36:33,201 [INFO] ConfigFileManager:1495 - The Die is : DIE440
+2024-04-09 14:36:34,131 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1028mS.
+2024-04-09 14:36:34,132 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-04-09 14:36:34,134 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.
+2024-04-09 14:36:37,019 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,019 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,019 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,020 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,020 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,020 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,021 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,021 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 14:36:37,021 [ERROR] ConfigurationRetriever:142 - IOException on connection: sw-center.st.com
+2024-04-09 15:16:03,690 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 384505912 Bytes (790626304)
+2024-04-09 15:16:07,398 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 314566728 Bytes (790626304)
+2024-04-09 15:16:07,664 [INFO] UtilMem:75 - End SaveConfig() Used Memory: 354412616 Bytes (790626304)
+2024-04-09 15:16:07,989 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: ADC
+2024-04-09 15:16:07,989 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: NVIC
+2024-04-09 15:16:07,989 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: SYS
+2024-04-09 15:16:07,989 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: GPIO
+2024-04-09 15:16:07,989 [INFO] BlockDiagram:2759 - set Specific Code input for plugin: RCC
+2024-04-09 15:16:07,992 [INFO] CodeGenerator:807 - code generatio: config db path: C:\ST\STM32CubeIDE_1.14.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.10.0.202311202037\\db\
+2024-04-09 15:16:08,063 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\license.tmp_save
+2024-04-09 15:16:08,110 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\license.tmp
+2024-04-09 15:16:08,138 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\gpio.tmp_save
+2024-04-09 15:16:08,176 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\gpio.tmp
+2024-04-09 15:16:08,227 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_it.c_save
+2024-04-09 15:16:08,315 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_it.c
+2024-04-09 15:16:08,321 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_it.h_save
+2024-04-09 15:16:08,375 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_it.h
+2024-04-09 15:16:08,390 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_hal_msp.c_save
+2024-04-09 15:16:08,495 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\stm32f0xx_hal_msp.c
+2024-04-09 15:16:08,501 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\system.tmp_save
+2024-04-09 15:16:08,534 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\MXTmpFiles\system.tmp
+2024-04-09 15:16:08,547 [INFO] CodeEngine:311 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_hal_conf.h_save
+2024-04-09 15:16:08,586 [INFO] CodeEngine:335 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\stm32f0xx_hal_conf.h
+2024-04-09 15:16:08,603 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\main.h_save
+2024-04-09 15:16:08,648 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Inc\main.h
+2024-04-09 15:16:08,657 [INFO] CodeEngine:255 - oldGeneratedFile, C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\main.c_save
+2024-04-09 15:16:08,745 [INFO] CodeEngine:279 - Generated code: C:\Users\0163022\STM32CubeIDE\workspace_1.14.1\QS SWITCH COntroller\Core\Src\main.c
+2024-04-09 15:16:09,584 [INFO] ProjectBuilder:3076 - Time for Copy HAL[1] : 647mS.
+2024-04-09 15:16:09,590 [INFO] ProjectBuilder:4485 - Project Generator version: 4.2.0-B44
+2024-04-09 15:16:09,699 [INFO] ConfigFileManager:1495 - The Die is : DIE440
+2024-04-09 15:16:10,609 [INFO] ProjectBuilder:4747 - Time for Generating toolchain IDE Files: 1019mS.
+2024-04-09 15:16:10,610 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 1mS.
+2024-04-09 15:16:10,612 [INFO] ProjectBuilder:2947 - Time for Copy CMSIS : 0mS.

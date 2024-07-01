@@ -1,0 +1,23 @@
+/*
+ * fault_handling.c
+ *
+ *  Created on: Jun 24, 2024
+ *      Author: 0163022
+ */
+
+#include "fault_handling.h"
+#include "main.h"
+
+// Fault definitions
+#define FAULT_NONE 0
+#define FAULT_STALL_TOUT 1
+#define FAULT_MISMATCH 2
+#define FAULT_ES_NOT_ACTIVE 3
+#define FAULT_INBETWEEN_STATE 4
+
+FaultState FAULT(void)
+    {
+
+if (GPIO_ACFB_Pin==GPIO_PIN_RESET &&GPIO_DCFB_Pin==GPIO_PIN_RESET)
+
+}

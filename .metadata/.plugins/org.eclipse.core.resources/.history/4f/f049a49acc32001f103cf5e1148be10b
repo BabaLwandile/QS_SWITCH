@@ -1,0 +1,12 @@
+/*
+ * QS_Switch.c
+ *
+ *  Created on: Jun 25, 2024
+ *      Author: 0163022
+ */
+
+#include "main.h"
+
+#define COOLDOWN 120000 // 2 minutes in milliseconds
+
+
