@@ -59,6 +59,3 @@ void Enter_Manual_Mode(void)
 	}
     }
 
-
-
-
