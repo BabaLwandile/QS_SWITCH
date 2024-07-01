@@ -82,8 +82,12 @@ void RunQSLoop(void)
     case STATE_TO_AC:
 	break;
 	ControlMotor(1);  //><Clockwise rotation
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_ACM_Pin, SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_DCM_Pin, RESET);
     case STATE_TO_DC:
 	break;
 	ControlMotor(-1);  //><Anti-Clockwise rotation
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_DCM_Pin, SET);
+	HAL_GPIO_WritePin(GPIOB, GPIO_LED_ACM_Pin, RESET);
 	}
     }

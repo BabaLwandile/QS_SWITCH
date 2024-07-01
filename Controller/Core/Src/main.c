@@ -19,6 +19,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "fault_handling.h"
+#include "QS_Switch.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -108,7 +109,7 @@ int main(void)
     /* USER CODE BEGIN 2 */
 
     /* USER CODE END 2 */
-
+    HAL_GPIO_WritePin(GPIOB, GPIO_LED_EN_Pin, GPIO_PIN_SET);
     /* Infinite loop */
     /* USER CODE BEGIN WHILE */
     while (1)
