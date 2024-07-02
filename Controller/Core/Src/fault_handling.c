@@ -60,10 +60,7 @@ void CoolDown(void)
     uint32_t Time = HAL_GetTick();
     while ((HAL_GetTick() - Time) < COOLDOWN_DURATION_MS)
 	{
-	HAL_GPIO_TogglePin(GPIOA, GPIO_LED_EN_Pin);
-	HAL_Delay(500);
 	}
-
     }
 
 void HandleFault(void)
@@ -81,18 +78,37 @@ void HandleFault(void)
 	HAL_GPIO_WritePin(GPIOB, GPIO_LED_FAULT_Pin, GPIO_PIN_RESET); ///>< Turn OFF the fault
 	break;
     case STATE_TIMEOUT:
-
-	break;
-    case STATE_STALL:
-	break;
-    case STATE_MISMATCH:
-	break;
-    case STATE_ES_NOT_ACTIVE:
-	HAL_GPIO_WritePin(GPIOA, GPIO_LED_FAULT_Pin, GPIO_PIN_SET);
+	HAL_GPIO_TogglePin(GPIOA, GPIO_LED_FAULT_Pin);
+	HAL_Delay(500);
 	// Stop the motor
 	HAL_GPIO_WritePin(GPIOB, GPIO_Forward_Pin | GPIO_Reverse_Pin,
 		GPIO_PIN_RESET);
 	CoolDown();
+	break;
+    case STATE_STALL:
+	HAL_GPIO_TogglePin(GPIOA, GPIO_LED_FAULT_Pin);
+	HAL_Delay(500);
+	// Stop the motor
+	HAL_GPIO_WritePin(GPIOB, GPIO_Forward_Pin | GPIO_Reverse_Pin,
+		GPIO_PIN_RESET);
+	CoolDown();
+	break;
+    case STATE_MISMATCH:
+	HAL_GPIO_WritePin(GPIOA, GPIO_LED_FAULT_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOA, GPIO_LED_ACM_Pin, GPIO_PIN_SET);
+	HAL_GPIO_WritePin(GPIOA, GPIO_LED_DCM_Pin, GPIO_PIN_SET);
+	CoolDown();
+	HAL_GPIO_WritePin(GPIOA, GPIO_LED_FAULT_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOA, GPIO_LED_ACM_Pin, GPIO_PIN_RESET);
+	HAL_GPIO_WritePin(GPIOA, GPIO_LED_DCM_Pin, GPIO_PIN_RESET);
+	break;
+    case STATE_ES_NOT_ACTIVE:
+	HAL_GPIO_WritePin(GPIOA, GPIO_LED_FAULT_Pin, GPIO_PIN_SET);
+	HAL_GPIO_TogglePin(GPIOA, GPIO_LED_EN_Pin);
+	HAL_Delay(500);
+	// Stop the motor
+	HAL_GPIO_WritePin(GPIOB, GPIO_Forward_Pin | GPIO_Reverse_Pin,
+		GPIO_PIN_RESET);
 	HAL_GPIO_WritePin(GPIOA, GPIO_LED_FAULT_Pin, GPIO_PIN_RESET);
 	break;
 	}
